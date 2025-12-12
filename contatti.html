@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Contatti - Enoteca Gusto e Sapori</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dark-mode.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+
+<header class="main-header">
+  <a href="index.html" class="logo"><img src="images/enoteca_logo.png" alt="Enoteca Gusto e Sapori"></a>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="chisiamo.html">Chi Siamo</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="vini.html">Vini</a>
+    <a href="https://www.facebook.com/people/Enoteca-Gusto-e-Sapori/100087040187435/" target="_blank">Blog</a>
+    <a href="contatti.html" class="current">Contatti</a>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+</header>
+
+<div class="main-content">
+  <h3>Contattaci</h3>
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="contact-info">
+        <h4>Informazioni di Contatto</h4>
+        <ul class="contact-details-list">
+          <li><span class="icon">📍</span><div><strong>Indirizzo:</strong><br>Via Magenta, 65, 25065 Lumezzane BS, Italia</div></li>
+          <li><span class="icon">📞</span><div><strong>Telefono:</strong><br><a href="tel:+393383050888">+39 338 305 0888</a></div></li>
+          <li><span class="icon">✉️</span><div><strong>Email:</strong><br><a href="mailto:sauro.kart@hotmail.it">sauro.kart@hotmail.it</a></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="contact-info">
+        <h4>Orari di Apertura</h4>
+        <ul class="contact-details-list">
+          <li><span class="icon">🗓️</span><div><strong>Lunedì:</strong> 08:00 – 12:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Martedì:</strong> 08:00 – 12:00 / 14:30 – 19:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Mercoledì:</strong> 08:00 – 12:00 / 14:30 – 19:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Giovedì:</strong> 08:00 – 12:00 / 14:30 – 19:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Venerdì:</strong> 08:00 – 12:00 / 14:30 – 19:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Sabato:</strong> 08:00 – 19:00</div></li>
+          <li><span class="icon">🗓️</span><div><strong>Domenica:</strong> 08:00 – 12:00</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="map-container" style="margin-top: 40px;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.92462364233!2d10.232394615561049!3d45.6423270791035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47817a4f25b5e5a5%3A0x4a4b3e3b3b3b3b3b!2sVia%20Magenta%2C%2065%2C%2025065%20Lumezzane%20BS!5e0!3m2!1sit!2sit!4v1678886123456" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</div>
+
+</div>
+<footer class="main-footer">
+  Enoteca Gusto e Sapori &copy; 2025 | Design by Giorgio Pietro Ghidini
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  menuToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>

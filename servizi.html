@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Servizi - Enoteca Gusto e Sapori</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dark-mode.js"></script>
+</head>
+<body class="servizi-background">
+<div class="page-wrapper">
+
+<header class="main-header">
+  <a href="index.html" class="logo"><img src="images/enoteca_logo.png" alt="Enoteca Gusto e Sapori"></a>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="chisiamo.html">Chi Siamo</a>
+    <a href="servizi.html" class="current">Servizi</a>
+    <a href="vini.html">Vini</a>
+    <a href="https://www.facebook.com/people/Enoteca-Gusto-e-Sapori/100087040187435/" target="_blank">Blog</a>
+    <a href="contatti.html">Contatti</a>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+</header>
+
+<div class="main-content">
+  <h3>I Nostri Servizi</h3>
+  <div class="services-grid">
+        <div class="service-item">
+          <img src="images/vini_pregiati.jpg" alt="Degustazioni Guidate">
+          <h4>Degustazioni Guidate</h4>
+          <p>Organizziamo serate di degustazione a tema per esplorare le diverse regioni vinicole e scoprire nuovi sapori in un'atmosfera conviviale.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/spillatrice.jpg" alt="Vino Sfuso">
+          <h4>Vino Sfuso</h4>
+          <p>Offriamo una selezione di vini sfusi di qualità, per un consumo quotidiano e sostenibile. Portate le vostre bottiglie o acquistate le nostre.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/Ratti_Barolo.jpg" alt="Consulenza Personalizzata">
+          <h4>Consulenza Personalizzata</h4>
+          <p>I nostri sommelier sono a vostra disposizione per consigliarvi nella scelta del vino perfetto per ogni occasione e per aiutarvi a creare la vostra cantina privata.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/CestoRegaloGin.jpg" alt="Cesti Regalo">
+          <h4>Cesti Regalo</h4>
+          <p>Realizziamo cesti e confezioni regalo personalizzate, combinando i migliori vini con prodotti gastronomici di alta qualità.</p>
+        </div>
+        <div class="service-item">
+          <img src="images/Formaggi_salami.jpg" alt="Servizi di Ristorazione">
+          <h4>Servizi di Ristorazione</h4>
+          <p>Nel periodo non estivo, prepariamo spiedo su richiesta (è gradita la prenotazione). Offriamo anche aperitivi con stuzzichini e abbiamo in vendita una selezione di prodotti gastronomici come salumi, formaggi, marmellate, miele e olio.</p>
+        </div>
+  </div>
+</div>
+
+</div>
+<footer class="main-footer">
+  Enoteca Gusto e Sapori &copy; 2025 | Design by Giorgio Pietro Ghidini
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  menuToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('active');
+  });
+});
+</script>
+
+</body>
+</html>

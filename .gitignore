@@ -1,0 +1,25 @@
+# SSH Keys (non vanno mai committati!)
+enoteca_github_key
+enoteca_github_key.pub
+
+# Claude AI files
+CLAUDE.md
+.claude/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.tmp
+
+# Node modules (se mai dovessi usarli)
+node_modules/

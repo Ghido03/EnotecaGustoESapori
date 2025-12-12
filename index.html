@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <title>Home - Enoteca Gusto e Sapori</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/dark-mode.js"></script>
+</head>
+<body>
+<div class="page-wrapper">
+
+<header class="main-header">
+  <a href="index.html" class="logo"><img src="images/enoteca_logo.png" alt="Enoteca Gusto e Sapori"></a>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+  <nav class="main-nav">
+    <a href="index.html" class="current">Home</a>
+    <a href="chisiamo.html">Chi Siamo</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="vini.html">Vini</a>
+    <a href="https://www.facebook.com/people/Enoteca-Gusto-e-Sapori/100087040187435/" target="_blank">Blog</a>
+    <a href="contatti.html">Contatti</a>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+  </nav>
+</header>
+
+<div class="main-content">
+  <div class="grid-container reveal-on-scroll">
+    <div class="grid-item">
+      <div class="banner">
+        <img src="images/serena_rose.jpg" alt="Vini Frizzanti">
+        <div class="label"><a href="vini.html">Vini Frizzanti</a></div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="banner">
+        <img src="images/rosso_del_pioppo.jpg" alt="Vini Rossi">
+        <div class="label"><a href="vini.html">Vini Rossi</a></div>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="banner">
+        <img src="images/Formaggi_salami.jpg" alt="Vini Bianchi">
+        <div class="label"><a href="index-2.html">Formaggi e Salumi</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hor_separator"></div>
+
+  <div class="grid-container">
+    <div class="grid-item" style="grid-column: span 2;">
+      <h3>Benvenuti da Gusto e Sapori</h3>
+      <img src="images/sala_degustazione_vino.jpg" alt="Interno Enoteca" class="img_inner">
+      <div class="extra_wrapper">
+        <p>Benvenuti nell'Enoteca Gusto e Sapori, un luogo dove la passione per il vino e la ricerca della qualità  si incontrano. Offriamo una selezione curata di vini da tutto il mondo, con un'attenzione particolare alle piccole produzioni e alle etichette emergenti.</p>
+        <p>Venite a trovarci per scoprire la nostra collezione e lasciatevi guidare dai nostri esperti sommelier in un viaggio attraverso i sapori e i profumi dei migliori vini. Organizziamo serate di degustazione, eventi a tema e offriamo consulenza per creare la vostra cantina personale.</p>
+      </div>
+    </div>
+    <div class="grid-item">
+    </div>
+  </div>
+
+  <div class="hor_separator"></div>
+
+  <h3>Galleria</h3>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="images/galleria_7.jpg" alt="Galleria Immagine 7" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/vini_piu_pregiati.jpg" alt="Vini più pregiati" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/galleria_3.jpg" alt="Galleria Immagine 3" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/spillatrice2.jpg" alt="Spillatrice" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/vini_molto_pregiati.jpg" alt="Vini molto pregiati" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/galleria_4.jpg" alt="Galleria Immagine 4" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/zona_degustazione.jpg" alt="Zona degustazione" class="gallery-image"></div>
+    <div class="gallery-item"><img src="images/miele_marmellate.jpg" alt="Miele e marmellate" class="gallery-image"></div>
+  </div>
+
+</div>
+
+</div>
+<footer class="main-footer">
+  Enoteca Gusto e Sapori &copy; 2025 | Design by Giorgio Pietro Ghidini
+</footer>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <span class="lightbox-prev">&#10094;</span>
+  <span class="lightbox-next">&#10095;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <div class="lightbox-caption"></div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+
+  menuToggle.addEventListener('click', function() {
+    mainNav.classList.toggle('active');
+  });
+
+  // Lightbox functionality
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const caption = document.querySelector('.lightbox-caption');
+  const images = document.querySelectorAll('.gallery-image');
+  const closeBtn = document.querySelector('.lightbox-close');
+  const nextBtn = document.querySelector('.lightbox-next');
+  const prevBtn = document.querySelector('.lightbox-prev');
+  let currentIndex = 0;
+
+  function fadeIn(element) {
+    element.style.display = 'block';
+    setTimeout(() => {
+      element.style.opacity = '1';
+    }, 10);
+  }
+
+  function fadeOut(element) {
+    element.style.opacity = '0';
+    setTimeout(() => {
+      element.style.display = 'none';
+    }, 300);
+  }
+
+  function showImage(index) {
+    currentIndex = index;
+    const img = images[index];
+    lightboxImg.setAttribute('src', img.getAttribute('src'));
+    caption.textContent = img.getAttribute('alt');
+    fadeIn(lightbox);
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', function() {
+      showImage(index);
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    fadeOut(lightbox);
+  });
+
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      fadeOut(lightbox);
+    }
+  });
+
+  nextBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  prevBtn.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (lightbox.style.display === 'block') {
+      if (e.key === 'Escape') {
+        fadeOut(lightbox);
+      } else if (e.key === 'ArrowRight') {
+        nextBtn.click();
+      } else if (e.key === 'ArrowLeft') {
+        prevBtn.click();
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>
